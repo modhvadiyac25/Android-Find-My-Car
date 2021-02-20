@@ -1,0 +1,32 @@
+<resources>
+    <!-- Base application theme.
+      <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+          <!--jeet -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+          <!--jeet -->
+    </style>
+</resources>
+
+<!--
+
+<resources>
+    <style name="Widget.Holo.TabWidget" parent="Widget.TabWidget">
+        <item name="android:tabStripLeft">@null</item>
+        <item name="android:tabStripRight">@null</item>
+        <item name="android:tabStripEnabled">false</item>
+        <item name="android:divider">?android:attr/dividerVertical</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:dividerPadding">8dip</item>
+        <item name="android:measureWithLargestChild">true</item>
+        <item name="android:tabLayout">@android:layout/tab_indicator_holo</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>
+-->
