@@ -103,8 +103,6 @@
                        android:fontFamily="@font/bold"
                        android:text="Forget Password?"
                        android:textColor="@color/black" />
-
-
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
@@ -117,9 +115,7 @@
                 android:fontFamily="@font/bold"
                 android:text="New User? Register"
                 android:textColor="@color/black" />
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
-
-
-

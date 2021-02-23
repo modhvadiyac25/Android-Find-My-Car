@@ -47,5 +47,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.android.material:material:1.0.*'
     implementation 'com.google.firebase:firebase-auth:20.0.2'
-
 }

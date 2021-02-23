@@ -21,7 +21,7 @@
             <!-- if you want to start your app with main activity then cut this <intent-filter> tag and past it in main activity -->
 
         </activity>
-        <activity android:name=".activity_home" />
+
         <activity android:name=".MainActivity"></activity>
     </application>
 

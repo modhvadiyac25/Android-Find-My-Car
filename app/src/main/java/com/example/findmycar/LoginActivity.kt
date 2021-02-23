@@ -8,6 +8,8 @@ import android.text.TextUtils
 import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
+import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -20,49 +22,65 @@ import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
-    private fun forgotPassword(username: EditText) {
-
-        if (username.text.toString().isEmpty()) {
-            return
-        }
-        if (!Patterns.EMAIL_ADDRESS.matcher(username.text.toString()).matches()) {
-            return
-        }
-        FirebaseAuth.getInstance().sendPasswordResetEmail(username.toString())
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this@LoginActivity, "Email sent.", Toast.LENGTH_LONG)
-                    // Log.d(TAG, "Email sent.")
-                }
-            }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        btn_register.setOnClickListener {
+            //startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+            // try this after everything ok !!
+            onBackPressed()
+        }
+
+//        var btn = findViewById<Button>(R.id.btn_forgot_pass)
+//        btn.setOnClickListener {
+//            Toast.makeText(this@LoginActivity, "Email sent.", Toast.LENGTH_LONG)
+//        }
+
+
+
+
+
+        fun forgotPassword(username: EditText) {
+            var email = username.text.toString().trim()
+            if (email.isEmpty()) { //username.text.toString()
+                return
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                return
+            }
+            FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this@LoginActivity, "Email sent.", Toast.LENGTH_LONG).show()
+                        // Log.d(TAG, "Email sent.")
+                    }
+                    else{
+                        Toast.makeText(this@LoginActivity,task.exception.toString(), Toast.LENGTH_LONG).show()
+                    }
+                }
+        }
         btn_forgot_pass.setOnClickListener {
-            Toast.makeText(this@LoginActivity, "Button is pressed", Toast.LENGTH_LONG)
+            Toast.makeText(this@LoginActivity, "Button is pressed", Toast.LENGTH_LONG).show()
+
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder.setTitle("Forgot Password")
             val view = layoutInflater.inflate(R.layout.dialig_forget_password, null)
             builder.setView(view)
-            val username = findViewById<EditText>(R.id.et_username)
-            builder.setPositiveButton("Reset", DialogInterface.OnClickListener { _, _ ->
-                forgotPassword(username)
-            })
-            builder.setNegativeButton("Close", DialogInterface.OnClickListener { _, _ ->
+            val username =  view.findViewById<EditText>(R.id.et_username)
 
-            })
+                builder.setPositiveButton("Reset", DialogInterface.OnClickListener { _, _ ->
+                    forgotPassword(username)
+                })
+                builder.setNegativeButton("Close", DialogInterface.OnClickListener { _, _ ->
+
+                })
+                builder.show()
 
         }
 
-        btn_register.setOnClickListener {
-            //startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
 
-            // try this after everything ok !!
-            onBackPressed()
-        }
 
         btn_sign_in.setOnClickListener {
             // if the input field is empty then toast will promted
@@ -125,4 +143,8 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
+
+
+
 }
