@@ -3,67 +3,85 @@ package com.example.findmycar
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import android.view.MenuItem
+import android.widget.Toast
+
+import androidx.appcompat.app.ActionBarDrawerToggle
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.header.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var navigationController : NavController
-    private lateinit var appBarConfiguration : AppBarConfiguration
-    private lateinit var  drawerLayout :DrawerLayout
-    private lateinit var listener : NavController.OnDestinationChangedListener
-
+    //for drawer layout
+    lateinit var toggle: ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val userId = intent.getStringExtra("user_id")
-        val emailId = intent.getStringExtra("email_id")
+        //login logo
+        profile_icon.setOnClickListener {
 
-        u_id.text = "User Id :: $userId"
-        emailid.text = "Email Id :: $emailId"
+            val intent =
+                Intent(this@MainActivity, Profile::class.java)
+            intent.putExtra(
+                "user_id",
+                FirebaseAuth.getInstance().currentUser!!.uid
+            )
+            startActivity(intent)
 
-        logout.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            startActivity(Intent(this@MainActivity,LoginActivity::class.java))
-            finish()
         }
-/*
-        navigationController = findNavController(R.id.fragment)
-        drawerLayout = findViewById(R.id.drawerlayout)
-        navigation_view.setupWithNavController(navigationController)
 
-        appBarConfiguration = AppBarConfiguration(navigationController.graph , drawerLayout)
+        //onclick of drawer menu icon
+        drawermenu_icon.setOnClickListener() {
 
-        setupActionBarWithNavController(navigationController,appBarConfiguration)
+            //calling drawer menu
+            navMenu()
+        }
+    }
 
-        listener = NavController.OnDestinationChangedListener{ controller, destination, arguments ->
+    //UDF function for drawerlayout
+    fun navMenu() {
+        //for drawer layout
+        toggle = ActionBarDrawerToggle(this, drawerlayout, R.string.open, R.string.close)
+        drawerlayout.addDrawerListener(toggle)
 
-            if(destination.id == R.id.login_fragment){
+        // to connect this toggle with drawer layout
+        toggle.syncState()
+        tv_email.text = intent.getStringExtra("email_id")
 
-            }else if(destination.id == R.id.signup_fragment){
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        navigation_view.setNavigationItemSelectedListener {
+            when (it.itemId) {
+
+                R.id.login -> {
+                    startActivity(
+                        Intent(
+                            this@MainActivity,
+                            LoginActivity::class.java
+                        )
+                    )
+                }
+
+                R.id.profile -> {
+                    val intent =
+                        Intent(this@MainActivity, Profile::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
 
             }
+            true
         }
-*/
-
-    }
-/*
-    override fun onSupportNavigateUp(): Boolean {
-        var navController = findNavController(R.id.fragment)
-
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
- */
-
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }

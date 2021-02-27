@@ -10,4 +10,21 @@
     <color name="btn_clr">#6B697C</color>
     <color name="yellow">#DBA508</color>
 
+
+    //for home page
+
+
+    <color name="black1">#090707</color>
+    <color name="white1">#F8FFF9</color>
+
+    <color name="home_background">#f2f5f8</color>
+    <color name="banner_background">#f1e9ce</color>
+    <color name="banner_background_light">#56f1e9ce</color>
+
+    <color name="card_col1">#d4cbe5</color>
+    <color name="card_col2">#7adccf</color>
+    <color name="card_col3">#f7c59f</color>
+    <color name="card_col4">#b8d7f5</color>
+
+
 </resources>

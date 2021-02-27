@@ -4,5 +4,49 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="login_fragment">This is login</string>
     <string name="signup_fragment">This is sign up</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    //for home page
+
+
+    <string name="main_heading">Find my car</string>
+    <string name="find_cars">Search your favourite car</string>
+    <string name="car_brands">Pick up your favourite brand</string>
+    <string name="masuz">Maruti Suzuki</string>
+    <string name="tata">Tata</string>
+    <string name="mahindra">Mahindra</string>
+    <string name="toyota">Toyota</string>
+    <string name="kia">Kia</string>
+    <string name="renault">Renault</string>
+    <string name="volkswagen">Volkswagen</string>
+    <string name="skoda">Skoda</string>
+    <string name="nissan">Nissan</string>
+    <string name="car_filters">Find the car of your choice</string>
+    <string name="find">Find</string>
+    <string name="car_filters_budget">By Budget</string>
+    <string name="car_filters_budget_5L">Under 5 Lakhs</string>
+    <string name="car_filters_budget_6L">Under 6 Lakhs</string>
+    <string name="car_filters_budget_8L">Under  8 Lakhs</string>
+    <string name="car_filters_budget_10L">Under  10 Lakhs</string>
+    <string name="car_filters_budget_12L">Under  12 Lakhs</string>
+    <string name="car_filters_budget_14L">Under  14 Lakhs</string>
+    <string name="car_filters_body">By Body Type</string>
+    <string name="car_filters_body_type_sedan"> Sedan</string>
+    <string name="car_filters_body_type_hatchback">Hatchback</string>
+    <string name="car_filters_body_type_suv">SUV</string>
+    <string name="car_filters_body_type_compact_suv">Compact SUV</string>
+    <string name="car_filters_body_type_compact_sedan">Compact Sedan</string>
+    <string name="car_filters_body_type_muv">MUV</string>
+    <string name="top_cars">Top Cars In India</string>
+    <string name="top_hatchbacks">Top Hatchbacks in India</string>
+    <string name="top_hatchbacks_names">Maruti Suzuki Swift,Hyundai i20</string>
+    <string name="top_sedan">Top Sedans in India</string>
+    <string name="top_sedans_names">Hyundai Verna,Honda City</string>
+    <string name="top_suv">Top SUVs in India</string>
+    <string name="top_suvs_names">Hyundai Creta,Tata Safari</string>
+
+
+
 
 </resources>
