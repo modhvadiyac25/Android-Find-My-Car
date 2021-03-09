@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 
 import androidx.appcompat.app.ActionBarDrawerToggle
 import com.google.firebase.auth.FirebaseAuth
@@ -23,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         profile_icon.setOnClickListener {
 
             val intent =
-                Intent(this@MainActivity, Profile::class.java)
+                Intent(this@MainActivity, UserProfile::class.java)
             intent.putExtra(
                 "user_id",
                 FirebaseAuth.getInstance().currentUser!!.uid
@@ -65,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.profile -> {
                     val intent =
-                        Intent(this@MainActivity, Profile::class.java)
+                        Intent(this@MainActivity, UserProfile::class.java)
                     intent.putExtra(
                         "user_id",
                         FirebaseAuth.getInstance().currentUser!!.uid
@@ -73,6 +72,15 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
 
+                R.id.EMI -> {
+                    val intent =
+                        Intent(this@MainActivity, EMICalculator::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
             }
             true
         }

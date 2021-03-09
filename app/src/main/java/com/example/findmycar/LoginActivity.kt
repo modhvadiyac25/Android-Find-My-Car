@@ -1,27 +1,21 @@
 package com.example.findmycar
-
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
+
 import android.util.Patterns
-import android.view.LayoutInflater
-import android.view.View
-import android.widget.Button
+
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.ktx.Firebase
+
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.regex.Pattern
+
 
 class LoginActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +31,6 @@ class LoginActivity : AppCompatActivity() {
 //        btn.setOnClickListener {
 //            Toast.makeText(this@LoginActivity, "Email sent.", Toast.LENGTH_LONG)
 //        }
-
-
-
-
 
         fun forgotPassword(username: EditText) {
             var email = username.text.toString().trim()
@@ -61,8 +51,8 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
         }
+
         btn_forgot_pass.setOnClickListener {
-            Toast.makeText(this@LoginActivity, "Button is pressed", Toast.LENGTH_LONG).show()
 
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder.setTitle("Forgot Password")
@@ -128,6 +118,7 @@ class LoginActivity : AppCompatActivity() {
                                         FirebaseAuth.getInstance().currentUser!!.uid
                                     )
                                     intent.putExtra("email_id", email)
+
                                     startActivity(intent)
                                     finish()
 
@@ -143,8 +134,4 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-
-
-
-
 }

@@ -7,10 +7,11 @@ class User {
     var lname =""
     var email =""
     var mobile_no :Long = 0
+    var imageUrl = ""
     var password=""
 
 
-    constructor(uid:String,fname:String ,lname:String,email:String,mobile_no:Long,password:String){
+    constructor(uid:String,fname:String ,lname:String,email:String,mobile_no:Long,imageUrl:String,password:String){
 
         this.uid = uid
         this.fname =  fname
@@ -18,6 +19,7 @@ class User {
         this.email = email
         this.mobile_no= mobile_no
         this.password= password
+        this.imageUrl=imageUrl
     }
 
 }
