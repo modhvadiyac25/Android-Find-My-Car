@@ -76,6 +76,8 @@ class RegisterActivity : AppCompatActivity() {
                     val email: String = email.text.toString().trim() { it <= ' ' }
                     val password: String = password.text.toString().trim() { it <= ' ' }
                     val cpassword: String = cpassword.text.toString().trim() { it <= ' ' }
+                    //this image url feild will be updated later on profile avtivity
+                    val imageUrl = ""
 
                     var database = FirebaseDatabase.getInstance().getReference().child("users")
                     lateinit var firebaseuser: FirebaseUser
@@ -107,6 +109,7 @@ class RegisterActivity : AppCompatActivity() {
                                                         lname,
                                                         email,
                                                         mobile_no,
+                                                        imageUrl,
                                                         password
                                                     )
                                                 )
