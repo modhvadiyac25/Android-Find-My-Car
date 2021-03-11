@@ -8,15 +8,12 @@
     tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerlayout"
-    >
+    android:id="@+id/drawerlayout">
 
     <!--xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"-->
     <!--<include layout="@layout/toolbar"/> -->
-
-
 
    <!--
    <fragment
@@ -70,9 +67,9 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="Profile" />
-
     </LinearLayout>
     -->
+
         <ScrollView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
@@ -82,18 +79,15 @@
           android:layout_height="match_parent"
           android:orientation="vertical"
           android:background="@color/home_background">
-
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:padding="20dp">
-
             <ImageView
                 android:id="@+id/drawermenu_icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/menu_icon"/>
-
             <ImageView
                 android:id="@+id/profile_icon"
                 android:layout_width="40dp"
@@ -103,12 +97,9 @@
                 android:layout_centerVertical="true"
                 android:background="@color/banner_background"/>
          </RelativeLayout>
-
-
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/main_heading"
                 android:layout_width="wrap_content"
@@ -118,41 +109,40 @@
                 android:textSize="24sp"
                 android:fontFamily="@font/displayheavyitalic"
                 android:layout_centerHorizontal="true"/>
-
-            <RelativeLayout
+             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/main_heading"
-                android:background="@color/white"
                 android:layout_marginLeft="40dp"
+                android:layout_marginTop="21dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@color/white"
                 android:elevation="8dp">
+                <SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </SearchView>
 
+<!--               <TextView-->
+<!--                   android:layout_width="wrap_content"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:layout_centerVertical="true"-->
+<!--                   android:layout_marginRight="10dp"-->
+<!--                   android:text="@string/find_cars" />-->
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="@string/find_cars"
-                   android:layout_centerVertical="true"
-                   android:layout_marginRight="10dp" />
-
-               <ImageView
-                   android:layout_width="30dp"
-                   android:layout_height="30dp"
-                   android:src="@drawable/search_icon"
-                   android:layout_alignParentRight="true"
-                   android:layout_centerVertical="true"
-                   android:layout_marginRight="10dp"/>
-            </RelativeLayout>
-
+<!--               <ImageView-->
+<!--                   android:layout_width="30dp"-->
+<!--                   android:layout_height="30dp"-->
+<!--                   android:layout_alignParentRight="true"-->
+<!--                   android:layout_centerVertical="true"-->
+<!--                   android:layout_marginRight="10dp"-->
+<!--                   android:src="@drawable/search_icon" />-->
+             </RelativeLayout>
          </RelativeLayout>
-
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/car_brands"
                 android:layout_width="wrap_content"
@@ -162,34 +152,27 @@
                 android:textSize="24sp"
                 android:fontFamily="@font/displayheavyitalic"
                 android:layout_centerHorizontal="true"/>
-
          </RelativeLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/maruti_suzuki_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -197,29 +180,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/tata_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -227,29 +204,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/mahindra_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -257,37 +228,28 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/toyota_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -295,29 +257,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/kia_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -325,29 +281,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/renault_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -355,37 +305,28 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_centerHorizontal="true"
                       android:src="@drawable/volkswagen_logo" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -393,29 +334,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/skoda_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -423,7 +358,6 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
 
             <LinearLayout
@@ -443,9 +377,7 @@
                       android:layout_height="wrap_content"
                       android:src="@drawable/nissan_logo"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -453,16 +385,11 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/car_filters"
                 android:layout_width="wrap_content"
@@ -472,13 +399,10 @@
                 android:textSize="24sp"
                 android:fontFamily="@font/displayheavyitalic"
                 android:layout_centerHorizontal="true"/>
-
          </RelativeLayout>
-
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/car_filters_budget"
                 android:layout_width="wrap_content"
@@ -488,27 +412,22 @@
                 android:textSize="24sp"
                 android:fontFamily="@font/displayheavyitalic"
                 android:layout_centerHorizontal="true"/>
-
          </RelativeLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center"
              android:orientation="horizontal">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="70dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <Button
                       android:layout_width="150dp"
                       android:layout_height="150dp"
@@ -519,9 +438,7 @@
                       android:textColor="@color/white1"
                       android:layout_marginTop="5dp"
                       android:layout_marginBottom="5dp"/>
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -529,22 +446,17 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="70dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <Button
                       android:layout_width="150dp"
                       android:layout_height="150dp"
@@ -555,9 +467,7 @@
                       android:textColor="@color/white1"
                       android:layout_marginTop="5dp"
                       android:layout_marginBottom="5dp"/>
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -565,30 +475,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center"
              android:orientation="horizontal">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="70dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <Button
                       android:layout_width="150dp"
                       android:layout_height="150dp"
@@ -599,9 +502,7 @@
                       android:textColor="@color/white1"
                       android:layout_marginTop="5dp"
                       android:layout_marginBottom="5dp"/>
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -609,22 +510,17 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="70dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <Button
                       android:layout_width="150dp"
                       android:layout_height="150dp"
@@ -635,9 +531,7 @@
                       android:textColor="@color/white1"
                       android:layout_marginTop="5dp"
                       android:layout_marginBottom="5dp"/>
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -645,30 +539,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center"
              android:orientation="horizontal">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="70dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <Button
                       android:layout_width="150dp"
                       android:layout_height="150dp"
@@ -679,9 +566,7 @@
                       android:textColor="@color/white1"
                       android:layout_marginTop="5dp"
                       android:layout_marginBottom="5dp"/>
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -689,22 +574,17 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="70dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <Button
                       android:layout_width="150dp"
                       android:layout_height="150dp"
@@ -715,9 +595,7 @@
                       android:textColor="@color/white1"
                       android:layout_marginTop="5dp"
                       android:layout_marginBottom="5dp"/>
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -725,16 +603,11 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
          <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/car_filters1"
                 android:layout_width="wrap_content"
@@ -744,21 +617,17 @@
                 android:textSize="24sp"
                 android:fontFamily="@font/displayheavyitalic"
                 android:layout_centerHorizontal="true"/>
-
          </RelativeLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
@@ -769,9 +638,7 @@
                       android:layout_height="wrap_content"
                       android:src="@drawable/hatchback_body"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -779,29 +646,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/sedan_body"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -809,29 +670,23 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:layout_gravity="center">
-
                   <ImageView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/suv_body"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -839,24 +694,18 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/custom">
-
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="60dp"
@@ -867,9 +716,7 @@
                       android:layout_height="wrap_content"
                       android:src="@drawable/sedan_body"
                       android:layout_centerInParent="true" />
-
                </RelativeLayout>
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -937,13 +784,8 @@
                    android:textAlignment="center"
                    android:fontFamily="@font/bold"
                    android:gravity="center_horizontal"/>
-
             </LinearLayout>
-
-
          </LinearLayout>
-
-
 
          <!--<androidx.viewpager2.widget.ViewPager2
              android:layout_width="match_parent"

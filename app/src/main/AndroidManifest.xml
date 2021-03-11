@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.findmycar">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile">
-
-        </activity>
+        <activity android:name=".UploadPic"></activity>
+        <activity android:name=".EMICalculator" />
+        <activity android:name=".test" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".UpdateProfile" />
         <activity android:name=".RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,12 +25,10 @@
         </activity>
         <activity android:name=".LoginActivity">
 
-
             <!-- if you want to start your app with main activity then cut this <intent-filter> tag and past it in main activity -->
 
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
+
 </manifest>
