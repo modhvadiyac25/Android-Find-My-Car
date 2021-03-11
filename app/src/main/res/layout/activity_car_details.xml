@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/hyn_i20"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/car_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="24dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/displayblack"
+                    android:text="Hyundai i20"
+                    android:layout_marginTop="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/car_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹6.80 Lakh"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ownwards (Avg. Ex-Showroom price)"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Features"
+                        android:textSize="28dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Dimensions &amp; Weight"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Length"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3995mm"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Width"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1775mm"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Height"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1505mm"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ground Clearance"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="170mm"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Engine &amp; Transmission"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="1dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Engine"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1197cc, Inline 4 Cylinders, DOHC"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fuel Tupe"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Petrol"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max Power(bhp@rpm)"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="82 bhp@6000 rpm"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max Torque(Nm@rpm)"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="115 Nm@4200 rpm"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mileage"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20.35 kmpl"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Drivetrain"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FWD"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transmission"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Manual 5 Gears"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emission Standard"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BS6"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Capacity"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="160dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seating Capacity"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Person"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bootspace"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="311 liters"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fuel Tank Capaccity"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="37 liters"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Other Versions"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="90dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="i20 Sportz 1.2 MT"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 7.59 Lakh"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="i20 Sportz 1.5 MT Diesel"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 9.00 Lakh"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="i20 Asta (O) 1.0 Turbo DCT"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 11.18 Lakh"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Colors"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="190dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Typhoon Silver"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Polar White"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Titan Grey"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Metallic Copper"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fiery Red"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Good Things"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="120dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Striking exterior styling grabs attention"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Spacious and feature-loaded cabin"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Powertrain choices across a long list of trims "
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Could be Better"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="85dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Has gotten expensive"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Material quality inside the cabin could’ve been better"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/displayblack"
+                        android:text="Verdict"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/expandBtn7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="EXPAND"
+                        android:textSize="12dp"
+                        android:textColor="#6200EA"
+                        android:layout_marginLeft="185dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expandableLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="The new-gen Hyundai i20 drops the ‘Elite’ from its name and takes the game forward with its striking looks and many first-in-class features. As before, it is spacious on the inside, but we expected slightly improved material quality especially since everything else has moved up a notch. What’s more, with no less than five powertrain choices, there’s an i20 for everyone. Overall, the new i20 remains a proper family hatch with added razzle-dazzle."
+
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/displayblack"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
