@@ -6,9 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_updateprofile.*
 
 
@@ -24,8 +27,19 @@ class UpdateProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_updateprofile)
 
-        //Delete user
+        //load profile image from the firebase
+        var imageref = FirebaseStorage.getInstance().reference.child("pics/" + uid!!)
+        imageref.downloadUrl.addOnSuccessListener { Uri ->
 
+            val imageURL = Uri.toString()
+            var IV = findViewById<ImageView>(R.id.image_view)
+            Glide.with(this)
+                .load(imageURL)
+                .into(IV)
+        }
+
+
+        //Delete user
         delete.setOnClickListener {
 
             database.child(uid!!).removeValue()

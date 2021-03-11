@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(
                         Intent(
                             this@MainActivity,
-                            LoginActivity::class.java
+                            UploadPic::class.java
                         )
                     )
                 }

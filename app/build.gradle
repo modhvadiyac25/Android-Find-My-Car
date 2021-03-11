@@ -52,9 +52,8 @@ dependencies {
     //cricler image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-        // FirebaseUI Storage only
-        implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
-     
+    // FirebaseUI Storage only
+    implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
 
 
 }
