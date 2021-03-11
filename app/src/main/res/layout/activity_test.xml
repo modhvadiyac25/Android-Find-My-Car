@@ -23,6 +23,13 @@
         android:src="@drawable/ic_profile_image"
         android:scaleType="centerCrop"
         />
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </SearchView>
+
     <Button
         android:id="@+id/image_chooser"
         android:layout_width="match_parent"
