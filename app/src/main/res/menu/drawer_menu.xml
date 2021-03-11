@@ -11,6 +11,10 @@
 
             android:title="Profile" />
         <item
+            android:id="@+id/EMI"
+
+            android:title="EMI Calculater" />
+        <item
             android:id="@+id/JustLaunchedCars"
 
             android:title="Just Launched Cars" />

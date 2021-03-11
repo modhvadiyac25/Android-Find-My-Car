@@ -1,7 +1,9 @@
 package com.example.findmycar
 
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,12 +27,11 @@ class login_fragment : Fragment() {
 
       */
 
+
         val view : View = inflater.inflate(R.layout.fragment_login_fragment, container, false)
 
       //  var email = view.email
-        //var password = view.password
-
-
+      // var password = view.password
 
         return view
     }
