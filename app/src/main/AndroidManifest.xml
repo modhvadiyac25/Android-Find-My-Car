@@ -12,19 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CarDetails"></activity>
-        <activity android:name=".UploadPic" />
-        <activity android:name=".EMICalculator" />
-        <activity android:name=".test" />
-        <activity android:name=".UserProfile" />
-        <activity android:name=".UpdateProfile" />
-        <activity android:name=".RegisterActivity">
+
+        <activity android:name=".PopularCars">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".CarDetails" />
+        <activity android:name=".UploadPic" />
+        <activity android:name=".EMICalculator" />
+        <activity android:name=".test" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".UpdateProfile" />
+        <activity android:name=".RegisterActivity"/>
+
+        <!--</activity>-->
         <activity android:name=".LoginActivity">
 
             <!-- if you want to start your app with main activity then cut this <intent-filter> tag and past it in main activity -->
