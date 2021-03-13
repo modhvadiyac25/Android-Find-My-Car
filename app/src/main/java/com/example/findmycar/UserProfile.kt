@@ -50,9 +50,6 @@ class UserProfile : AppCompatActivity() {
                 .into(IV)
         }
 
-
-
-
         image_view.setOnClickListener {
           takePictureIntent()
         }
@@ -89,10 +86,7 @@ class UserProfile : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //var sb = StringBuilder()
                 for (i in snapshot.children) {
-
                     if (id.equals(i.child("uid").getValue())) {
-
-
                         findViewById<TextView>(R.id.text_email).setText(
                             i.child("email").getValue().toString()
                         )
@@ -109,7 +103,6 @@ class UserProfile : AppCompatActivity() {
         }
         database.addValueEventListener(getdata)
         database.addListenerForSingleValueEvent(getdata)
-
 
     }
 

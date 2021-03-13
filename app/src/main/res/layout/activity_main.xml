@@ -110,6 +110,7 @@
                 android:fontFamily="@font/displayheavyitalic"
                 android:layout_centerHorizontal="true"/>
              <RelativeLayout
+                 android:id="@+id/search_relative_layout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/main_heading"
@@ -119,25 +120,25 @@
                 android:layout_marginBottom="20dp"
                 android:background="@color/white"
                 android:elevation="8dp">
-                <SearchView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </SearchView>
+<!--                <SearchView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+<!--                </SearchView>-->
 
-<!--               <TextView-->
-<!--                   android:layout_width="wrap_content"-->
-<!--                   android:layout_height="wrap_content"-->
-<!--                   android:layout_centerVertical="true"-->
-<!--                   android:layout_marginRight="10dp"-->
-<!--                   android:text="@string/find_cars" />-->
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="10dp"
+                   android:text="@string/find_cars" />
 
-<!--               <ImageView-->
-<!--                   android:layout_width="30dp"-->
-<!--                   android:layout_height="30dp"-->
-<!--                   android:layout_alignParentRight="true"-->
-<!--                   android:layout_centerVertical="true"-->
-<!--                   android:layout_marginRight="10dp"-->
-<!--                   android:src="@drawable/search_icon" />-->
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="10dp"
+                   android:src="@drawable/search_icon" />
              </RelativeLayout>
          </RelativeLayout>
          <RelativeLayout
