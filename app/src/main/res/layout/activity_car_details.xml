@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    tools:context=".CarDetails">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +23,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/car_img1"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:src="@drawable/hyn_i20"
@@ -125,6 +129,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/length"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3995mm"
@@ -147,6 +152,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/width"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1775mm"
@@ -169,6 +175,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/height"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1505mm"
@@ -191,6 +198,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/gc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="170mm"
@@ -251,6 +259,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/engine"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1197cc, Inline 4 Cylinders, DOHC"
@@ -267,12 +276,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Fuel Tupe"
+                            android:text="Fuel Type"
                             android:textSize="18dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/fuel_type"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Petrol"
@@ -295,6 +305,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/mp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="82 bhp@6000 rpm"
@@ -309,6 +320,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/mt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Max Torque(Nm@rpm)"
@@ -339,6 +351,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/mileage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="20.35 kmpl"
@@ -361,6 +374,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/dt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="FWD"
@@ -375,6 +389,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Transmission"
@@ -383,6 +398,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/transmission"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Manual 5 Gears"
@@ -405,6 +421,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/es"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="BS6"
@@ -465,6 +482,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/sc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="5 Person"
@@ -487,6 +505,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/bootspace"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="311 liters"
@@ -509,6 +528,7 @@
                             android:fontFamily="@font/displayblack"/>
 
                         <TextView
+                            android:id="@+id/ftc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="37 liters"
@@ -611,7 +631,6 @@
                             android:textSize="18dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/displayblack"/>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -665,6 +684,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/c1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Typhoon Silver"
@@ -687,6 +707,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/c2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Polar White"
@@ -702,6 +723,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/c3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Titan Grey"
@@ -717,6 +739,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/c4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Metallic Copper"
@@ -732,6 +755,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/c5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Fiery Red"
@@ -785,43 +809,45 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/good_things"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Striking exterior styling grabs attention"
+                            android:text=""
                             android:textSize="18dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/displayblack"/>
                     </LinearLayout>
+                    <!-- android:text="Striking exterior styling grabs attention"-->
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="15dp">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_marginTop="15dp">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Spacious and feature-loaded cabin"
-                            android:textSize="18dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/displayblack"/>
-                    </LinearLayout>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Spacious and feature-loaded cabin"-->
+<!--                            android:textSize="18dp"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:fontFamily="@font/displayblack"/>-->
+<!--                    </LinearLayout>-->
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="15dp">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_marginTop="15dp">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Powertrain choices across a long list of trims "
-                            android:textSize="18dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/displayblack"/>
-                    </LinearLayout>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Powertrain choices across a long list of trims "-->
+<!--                            android:textSize="18dp"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:fontFamily="@font/displayblack"/>-->
+<!--                    </LinearLayout>-->
 
 
                 </LinearLayout>
@@ -869,6 +895,7 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/could_be_better"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Has gotten expensive"
@@ -876,21 +903,22 @@
                             android:textColor="@color/black"
                             android:fontFamily="@font/displayblack"/>
                     </LinearLayout>
+<!--                    android:text="Has gotten expensive"-->
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="15dp">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_marginTop="15dp">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Material quality inside the cabin could’ve been better"
-                            android:textSize="18dp"
-                            android:textColor="@color/black"
-                            android:fontFamily="@font/displayblack"/>
-                    </LinearLayout>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Material quality inside the cabin could’ve been better"-->
+<!--                            android:textSize="18dp"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:fontFamily="@font/displayblack"/>-->
+<!--                    </LinearLayout>-->
 
 
 
@@ -921,7 +949,6 @@
                         android:layout_marginLeft="185dp"
                         android:backgroundTint="@color/white"
                         android:layout_marginTop="10dp"/>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -939,23 +966,19 @@
                         android:layout_marginTop="15dp">
 
                         <TextView
+                            android:id="@+id/verdict"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="The new-gen Hyundai i20 drops the ‘Elite’ from its name and takes the game forward with its striking looks and many first-in-class features. As before, it is spacious on the inside, but we expected slightly improved material quality especially since everything else has moved up a notch. What’s more, with no less than five powertrain choices, there’s an i20 for everyone. Overall, the new i20 remains a proper family hatch with added razzle-dazzle."
-
                             android:textSize="18dp"
+                            android:text="The new-gen Hyundai i20 drops the ‘Elite’ from its name and takes the game forward with its striking looks and many first-in-class features. As before, it is spacious on the inside, but we expected slightly improved material quality especially since everything else has moved up a notch. What’s more, with no less than five powertrain choices, there’s an i20 for everyone. Overall, the new i20 remains a proper family hatch with added razzle-dazzle."
                             android:textColor="@color/black"
                             android:fontFamily="@font/displayblack"/>
 
+<!--                        android:text="The new-gen Hyundai i20 drops the ‘Elite’ from its name and takes the game forward with its striking looks and many first-in-class features. As before, it is spacious on the inside, but we expected slightly improved material quality especially since everything else has moved up a notch. What’s more, with no less than five powertrain choices, there’s an i20 for everyone. Overall, the new i20 remains a proper family hatch with added razzle-dazzle."-->
+
                     </LinearLayout>
-
                 </LinearLayout>
-
-
-
             </LinearLayout>
-
-
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

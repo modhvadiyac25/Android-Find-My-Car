@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.MenuItem
 
 import androidx.appcompat.app.ActionBarDrawerToggle
+import com.example.findmycar.CarDetails
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.header.*
@@ -18,9 +19,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //redirect to the search avtivity
+        search_relative_layout.setOnClickListener {
+            startActivity(Intent(this,Search::class.java))
+        }
+
+
         //login logo
         profile_icon.setOnClickListener {
-
             val intent =
                 Intent(this@MainActivity, UserProfile::class.java)
             intent.putExtra(
@@ -28,7 +34,6 @@ class MainActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance().currentUser!!.uid
             )
             startActivity(intent)
-
         }
 
         //onclick of drawer menu icon
@@ -74,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.EMI -> {
                     val intent =
-                        Intent(this@MainActivity, EMICalculator::class.java)
+                        Intent(this@MainActivity,  CarDetails::class.java)
                     intent.putExtra(
                         "user_id",
                         FirebaseAuth.getInstance().currentUser!!.uid
