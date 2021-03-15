@@ -76,6 +76,25 @@ class MainActivity : AppCompatActivity() {
                     )
                     startActivity(intent)
                 }
+                R.id.nav_populer_cars -> {
+                    val intent =
+                        Intent(this@MainActivity, PopularCars::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
+
+                R.id.nav_car_details -> {
+                    val intent =
+                        Intent(this@MainActivity, CarDetails::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
 
                 R.id.EMI -> {
                     val intent =

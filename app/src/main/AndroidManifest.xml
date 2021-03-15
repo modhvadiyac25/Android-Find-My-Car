@@ -12,18 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
- 
 
         <activity android:name=".PopularCars">
         </activity>
-
         <activity android:name=".CarDetails" />
-
         <activity android:name=".SearchList"></activity>
         <activity android:name=".Search" />
- 
         <activity android:name=".UploadPic" />
-        <activity android:name=".CarDetails" />
         <activity android:name=".EMICalculator" />
         <activity android:name=".test" />
         <activity android:name=".UserProfile" />
@@ -31,7 +26,6 @@
         <activity android:name=".RegisterActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
-
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
