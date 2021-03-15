@@ -12,9 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
         private val itemTitles = arrayOf("Hyundai i20","Hyundai Creta","Hyundai Venue","Kia Seltos","Kia Sonet","Renault Kiger","Maruti Suzuki Baleno","Maruti Suzuki Swift","Tata Safari","Toyota Innova Crysta")
-
         private val itemDetails = arrayOf("₹6.80 Lakh","₹10 Lakh","₹6.87 Lakh","₹9.90 Lakh","₹6.79 Lakh","₹5.45 Lakh","₹5.88 Lakh","₹5.73 Lakh","₹14.70 Lakh","₹16.27 Lakh")
-
         private val itemImages = intArrayOf(
             R.drawable.hyn_i20,
             R.drawable.img_hyn_creta,
@@ -41,7 +39,6 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
             textDes = itemView.findViewById(R.id.car_price)
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v : View = LayoutInflater.from(parent.context)
             .inflate(R.layout.recyclerview_model,parent,false)
@@ -53,6 +50,7 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
         holder.textDes.text = itemDetails [position]
         holder.image.setImageResource(itemImages [position])
     }
+
     override fun getItemCount(): Int {
         return itemTitles.size
     }

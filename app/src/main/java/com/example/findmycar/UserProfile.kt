@@ -76,7 +76,6 @@ class UserProfile : AppCompatActivity() {
         //retriving data from the database
 
         // show profile
-
         val id = intent.getStringExtra("user_id").toString()
 
         var getdata = object : ValueEventListener {
@@ -126,7 +125,7 @@ class UserProfile : AppCompatActivity() {
     private fun uploadImageAndSaveUri(imageBitmap: Bitmap) {
         var baos = ByteArrayOutputStream()
         val storageRef =
-            FirebaseStorage.getInstance().reference.child("pics/${FirebaseAuth.getInstance().currentUser?.uid}")
+            FirebaseStorage.getInstance().reference.child("pics/${FirebaseAuth.getInstance().currentUser?.uid}" + ".jpg")
         imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
         val image = baos.toByteArray()
         val upload = storageRef.putBytes(image)
