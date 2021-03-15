@@ -59,16 +59,16 @@ class UploadPic : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == PIC_IMAGE_CODE && resultCode == Activity.RESULT_OK && data != null){
-             val selectedImage =  data?.data
-            val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
-            val cursor = contentResolver.query(selectedImage!!,filePathColumn,null,null,null)
-            cursor?.moveToFirst()
-            val ColumnIndex = cursor?.getColumnIndex(filePathColumn[0])
-            val picturePath = cursor?.getString(ColumnIndex!!)
-            cursor?.close()
-            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath))
-
-        }
+//        if(requestCode == PIC_IMAGE_CODE && resultCode == Activity.RESULT_OK && data != null){
+//             val selectedImage =  data?.data
+//            val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
+//            val cursor = contentResolver.query(selectedImage!!,filePathColumn,null,null,null)
+//            cursor?.moveToFirst()
+//            val ColumnIndex = cursor?.getColumnIndex(filePathColumn[0])
+//            val picturePath = cursor?.getString(ColumnIndex!!)
+//            cursor?.close()
+//            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath))
+//
+//        }
     }
 }
