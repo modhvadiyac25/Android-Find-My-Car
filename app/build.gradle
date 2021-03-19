@@ -53,6 +53,12 @@ dependencies {
 
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
+    //volley library
+    implementation 'com.android.volley:volley:1.1.1'
+
+    //glide library
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
     //cardview depedency
     implementation 'androidx.cardview:cardview:1.0.0'
 
@@ -61,6 +67,5 @@ dependencies {
 
     // FirebaseUI Storage only
     implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
-
 
 }
