@@ -117,6 +117,11 @@ class LoginActivity : AppCompatActivity() {
                                         "user_id",
                                         FirebaseAuth.getInstance().currentUser!!.uid
                                     )
+                                    Toast.makeText(
+                                        this@LoginActivity,
+                                        "email :- $email",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
                                     intent.putExtra("email_id", email)
 
                                     startActivity(intent)

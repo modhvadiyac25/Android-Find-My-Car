@@ -113,11 +113,11 @@ class RegisterActivity : AppCompatActivity() {
                                                         password
                                                     )
                                                 )
-                                            Toast.makeText(
-                                                applicationContext,
-                                                " Registration succesfull !! ",
-                                                Toast.LENGTH_LONG
-                                            ).show()
+                                                Toast.makeText(
+                                                    applicationContext,
+                                                    " Registration succesfull !! ",
+                                                    Toast.LENGTH_LONG
+                                                ).show()
 
 
                                             val intent =

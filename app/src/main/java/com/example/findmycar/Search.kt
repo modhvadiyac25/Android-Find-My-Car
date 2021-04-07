@@ -19,11 +19,8 @@ class Search : AppCompatActivity() {
         setContentView(R.layout.activity_search)
 
 
-       // val names = arrayOf("Android", "java", "sql", "c", "C++")
-
         var names : ArrayList<String> = ArrayList()
         names.clear()
-
 
         // show profile
       //  val id = intent.getStringExtra("user_id").toString()
@@ -41,6 +38,7 @@ class Search : AppCompatActivity() {
                 }
             }
         }
+
         database.addValueEventListener(getdata)
         database.addListenerForSingleValueEvent(getdata)
 
@@ -62,14 +60,11 @@ class Search : AppCompatActivity() {
                 }
                 return false
             }
-
             override fun onQueryTextChange(query: String?): Boolean {
-
                 adapter.filter.filter(query)
 
                 return false
             }
         })
-
     }
 }

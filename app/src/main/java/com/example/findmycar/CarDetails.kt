@@ -27,7 +27,7 @@ class CarDetails : AppCompatActivity() {
         setContentView(R.layout.activity_car_details)
 
         // show details
-        val car_id = "1" //intent.getStringExtra("car_id").toString()
+        val car_id = intent.getStringExtra("car_id").toString()
 
         var getdata = object : ValueEventListener {
 
