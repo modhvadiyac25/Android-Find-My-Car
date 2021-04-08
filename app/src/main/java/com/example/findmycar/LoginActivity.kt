@@ -14,7 +14,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 import kotlinx.android.synthetic.main.activity_login.*
 
-
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
 //        }
 
         fun forgotPassword(username: EditText) {
+
             var email = username.text.toString().trim()
             if (email.isEmpty()) { //username.text.toString()
                 return
@@ -40,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
             if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 return
             }
+
             FirebaseAuth.getInstance().sendPasswordResetEmail(email)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
@@ -67,20 +68,15 @@ class LoginActivity : AppCompatActivity() {
 
                 })
                 builder.show()
-
         }
-
-
 
         btn_sign_in.setOnClickListener {
             // if the input field is empty then toast will promted
             when {
-
                 TextUtils.isEmpty(email.text.toString().trim() { it <= ' ' }) -> {
                     Toast.makeText(this@LoginActivity, "Please Enter Email", Toast.LENGTH_SHORT)
                         .show()
                 }
-
                 TextUtils.isEmpty(password.text.toString().trim() { it <= ' ' }) -> {
                     Toast.makeText(
                         this@LoginActivity,
@@ -92,7 +88,6 @@ class LoginActivity : AppCompatActivity() {
 
                     val email: String = email.text.toString().trim() { it <= ' ' }
                     val password: String = password.text.toString().trim() { it <= ' ' }
-
 
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(
@@ -126,7 +121,6 @@ class LoginActivity : AppCompatActivity() {
 
                                     startActivity(intent)
                                     finish()
-
                                 } else {
                                     Toast.makeText(
                                         this@LoginActivity,

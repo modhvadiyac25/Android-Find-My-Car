@@ -237,8 +237,6 @@
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
                             android:text="@string/find_cars" />
-
-
                     </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
