@@ -12,6 +12,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.header.*
 
 class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelectedListener {
 
@@ -39,21 +40,21 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
 
         // to connect this toggle with drawer layout
         //toggle.syncState()
-        Toast.makeText(this,"email :  ${intent.getStringExtra("email_id").toString()}",Toast.LENGTH_LONG).show()
-       // tv_email.text = "iamcheta@gmail.com" //intent.getStringExtra("email_id").toString()
+        //Toast.makeText(this,"email :  ${intent.getStringExtra("email_id").toString()}",Toast.LENGTH_LONG).show()
+        tv_email.text = "modhvadiyac25@gmail.com"
 
 //        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navigation_view.setNavigationItemSelectedListener{
             when (it.itemId) {
 
-                R.id.login -> {
-                    startActivity(
-                        Intent(
-                            this@MainActivity,
-                            UploadPic::class.java
-                        )
-                    )
-                }
+//                R.id.login -> {
+//                    startActivity(
+//                        Intent(
+//                            this@MainActivity,
+//                            UploadPic::class.java
+//                        )
+//                    )
+//                }
 
                 R.id.profile -> {
                     val intent =
@@ -74,15 +75,15 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
                     startActivity(intent)
                 }
 
-                R.id.nav_car_details -> {
-                    val intent =
-                        Intent(this@MainActivity, CarDetails::class.java)
-                    intent.putExtra(
-                        "user_id",
-                        FirebaseAuth.getInstance().currentUser!!.uid
-                    )
-                    startActivity(intent)
-                }
+//                R.id.nav_car_details -> {
+//                    val intent =
+//                        Intent(this@MainActivity, CarDetails::class.java)
+//                    intent.putExtra(
+//                        "user_id",
+//                        FirebaseAuth.getInstance().currentUser!!.uid
+//                    )
+//                    startActivity(intent)
+//                }
 
                 R.id.EMI -> {
                     val intent =
@@ -98,7 +99,7 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
         }
 
         //redirect to the search avtivity
-        search_relative_layout.setOnClickListener {
+        context_search.setOnClickListener {
             startActivity(Intent(this,Search::class.java))
         }
 
@@ -125,6 +126,7 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
 //    fun navMenu() {
 //
 //    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (toggle.onOptionsItemSelected(item)) {
             return true
@@ -132,10 +134,7 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
         return super.onOptionsItemSelected(item)
     }
 
-
     override fun onNavigationItemSelected(it: MenuItem): Boolean {
         TODO("Not yet implemented")
-
-
     }
 }

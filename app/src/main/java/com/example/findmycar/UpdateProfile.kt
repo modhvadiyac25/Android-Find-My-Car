@@ -80,8 +80,7 @@ class UpdateProfile : AppCompatActivity() {
             }
             else{
                 Toast.makeText(this,"Opps ! Update Faild !!",Toast.LENGTH_LONG).show()
-            }
-
+            } 
         }
 
         // show profile

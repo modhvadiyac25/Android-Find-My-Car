@@ -35,10 +35,10 @@
                     />
 
                 <ImageView
-                    android:layout_width="30dp"
+                    android:id="@+id/context_search"
+                    android:layout_width="40dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="100dp"
-                    android:layout_gravity="right"
+
                     android:src="@drawable/search_icon" />
 
             </LinearLayout>
@@ -183,26 +183,26 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:background="@color/home_background">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
-                    <!--            <ImageView-->
-                    <!--                android:id="@+id/drawermenu_icon"-->
-                    <!--                android:layout_width="40dp"-->
-                    <!--                android:layout_height="40dp"-->
-                    <!--                android:src="@drawable/menu_icon"/>-->
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="20dp">-->
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/drawermenu_icon"-->
+<!--                                    android:layout_width="40dp"-->
+<!--                                    android:layout_height="40dp"-->
+<!--                                    android:src="@drawable/menu_icon"/>-->
 
 
-                    <!--            <ImageView-->
-                    <!--                android:id="@+id/profile_icon"-->
-                    <!--                android:layout_width="40dp"-->
-                    <!--                android:layout_height="40dp"-->
-                    <!--                android:src="@drawable/login_logo"-->
-                    <!--                android:layout_alignParentRight="true"-->
-                    <!--                android:layout_centerVertical="true"-->
-                    <!--                android:background="@color/banner_background"/>-->
-                </RelativeLayout>
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/profile_icon"-->
+<!--                                    android:layout_width="40dp"-->
+<!--                                    android:layout_height="40dp"-->
+<!--                                    android:src="@drawable/login_logo"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_centerVertical="true"-->
+<!--                                    android:background="@color/banner_background"/>-->
+<!--                </RelativeLayout>-->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -213,32 +213,33 @@
                         android:text="@string/main_heading"
                         android:layout_marginLeft="5dp"
                         android:textSize="24sp"
-                        android:fontFamily="@font/displayheavyitalic"
-                        android:layout_centerHorizontal="true"/>
-                    <RelativeLayout
-                        android:id="@+id/search_relative_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_below="@id/main_heading"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="21dp"
-                        android:layout_marginRight="40dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@color/white"
-                        android:elevation="8dp">
-                        <!--                <SearchView-->
-                        <!--                    android:layout_width="match_parent"-->
-                        <!--                    android:layout_height="match_parent">-->
-                        <!--                </SearchView>-->
+                        android:fontFamily="@font/displayheavy"
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="10dp"
-                            android:text="@string/find_cars" />
-                    </RelativeLayout>
-                </RelativeLayout>
+                        />
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/search_relative_layout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_below="@id/main_heading"-->
+<!--                        android:layout_marginLeft="40dp"-->
+<!--                        android:layout_marginTop="21dp"-->
+<!--                        android:layout_marginRight="40dp"-->
+<!--                        android:layout_marginBottom="20dp"-->
+<!--                        android:background="@color/white"-->
+<!--                        android:elevation="8dp">-->
+<!--                        &lt;!&ndash;                <SearchView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    android:layout_height="match_parent">&ndash;&gt;-->
+<!--                        &lt;!&ndash;                </SearchView>&ndash;&gt;-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:layout_marginRight="10dp"-->
+<!--                            android:text="@string/find_cars" />-->
+<!--                    </RelativeLayout>-->
+               </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -889,8 +890,6 @@
                     android:id="@+id/viewpager"/>-->
             </LinearLayout>
         </ScrollView>
-
-
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigation_view"
             android:layout_width="wrap_content"

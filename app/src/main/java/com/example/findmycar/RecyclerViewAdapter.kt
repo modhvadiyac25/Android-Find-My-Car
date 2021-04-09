@@ -16,35 +16,35 @@ import com.google.firebase.database.*
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     var database: DatabaseReference = FirebaseDatabase.getInstance().getReference("cars")
-    fun retriveData() {
-        itemTitles.clear()
-        itemDetails.clear()
-        var getdata = object : ValueEventListener {
-            override fun onCancelled(error: DatabaseError) {
+//    fun retriveData() {
+//        itemTitles.clear()
+//        itemDetails.clear()
+//        var getdata = object : ValueEventListener {
+//            override fun onCancelled(error: DatabaseError) {
+//
+//            }
+//
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                //var sb = StringBuilder()
+//                for (i in snapshot.children) {
+//                    itemTitles.add(i.child("").child("brand").getValue().toString() +" "+ i.child("").child("name").getValue().toString() )
+//                    itemDetails.add(i.child("").child("price").getValue().toString())
+//
+//                }
+//            }
+//        }
+//
+//        database.addValueEventListener(getdata)
+//        database.addListenerForSingleValueEvent(getdata)
+//
+//    }
 
-            }
-
-            override fun onDataChange(snapshot: DataSnapshot) {
-                //var sb = StringBuilder()
-                for (i in snapshot.children) {
-                    itemTitles.add(i.child("").child("Brand").getValue().toString() +" "+ i.child("").child("Name").getValue().toString() )
-                    itemDetails.add(i.child("").child("Price").getValue().toString())
-
-                }
-            }
-        }
-
-        database.addValueEventListener(getdata)
-        database.addListenerForSingleValueEvent(getdata)
-
-    }
-
-//        private val itemTitles = arrayOf("Hyundai i20","Hyundai Creta","Hyundai Venue","Kia Seltos","Kia Sonet","Renault Kiger","Maruti Suzuki Baleno","Maruti Suzuki Swift","Tata Safari","Toyota Innova Crysta")
-//        private val itemDetails = arrayOf("₹6.80 Lakh","₹10 Lakh","₹6.87 Lakh","₹9.90 Lakh","₹6.79 Lakh","₹5.45 Lakh","₹5.88 Lakh","₹5.73 Lakh","₹14.70 Lakh","₹16.27 Lakh")
+        private val itemTitles = arrayOf("Hyundai i20","Hyundai Creta","Hyundai Venue","Kia Seltos","Kia Sonet","Renault Kiger","Maruti Suzuki Baleno","Maruti Suzuki Swift","Tata Safari","Toyota Innova Crysta")
+        private val itemDetails = arrayOf("₹6.80 Lakh","₹10 Lakh","₹6.87 Lakh","₹9.90 Lakh","₹6.79 Lakh","₹5.45 Lakh","₹5.88 Lakh","₹5.73 Lakh","₹14.70 Lakh","₹16.27 Lakh")
 
 
-    private var itemTitles: ArrayList<String> = ArrayList()
-    private var itemDetails: ArrayList<String> = ArrayList()
+//    private var itemTitles: ArrayList<String> = ArrayList()
+//    private var itemDetails: ArrayList<String> = ArrayList()
 
     private val itemImages = intArrayOf(
         R.drawable.hyn_i20,
@@ -95,7 +95,11 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
 
     var flage = true
     override fun getItemCount(): Int {
-            retriveData()
+//        if(flage){
+//            retriveData()
+//            flage=false
+//        }
+
         return itemTitles.size
     }
 

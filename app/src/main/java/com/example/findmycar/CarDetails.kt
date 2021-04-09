@@ -27,7 +27,7 @@ class CarDetails : AppCompatActivity() {
         setContentView(R.layout.activity_car_details)
 
         // show details
-        val car_id = intent.getStringExtra("car_id").toString()
+        val car_name1 = intent.getStringExtra("Name").toString()
 
         var getdata = object : ValueEventListener {
 
@@ -36,43 +36,45 @@ class CarDetails : AppCompatActivity() {
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-                //var sb = StringBuilder()
+
                 for (i in snapshot.children) {
-                    if (car_id.equals(i.child("cid").getValue())) {
-                        var Brand = i.child("Brand").getValue().toString()
-                        var Could_Be_Better = i.child("Could_Be_Better").getValue().toString()
-                        var Description = i.child("Description").getValue().toString()
-                        var Emission_Standard = i.child("Emission_Standard").getValue().toString()
-                        var Engine = i.child("Engine").getValue().toString()
-                        var Engine_Type = i.child("Engine_Type").getValue().toString()
-                        var Fuel_Tank_Capacity = i.child("Fuel_Tank_Capacity").getValue().toString()
-                        var Fuel_Type = i.child("Fuel_Type").getValue().toString()
-                        var Good_Things = i.child("Good_Things").getValue().toString()
-                        var Height = i.child("Height").getValue().toString()
-                        var ImageUrl = i.child("ImageUrl").getValue().toString()
-                        var Length = i.child("Length").getValue().toString()
-                        var Max_Power = i.child("Max_Power").getValue().toString()
-                        var Max_Torque = i.child("Max_Torque").getValue().toString()
-                        var Mileage = i.child("Mileage").getValue().toString()
-                        var Model = i.child("Model").getValue().toString()
-                        var Name = i.child("Name").getValue().toString()
-                        var Price= i.child("Price").getValue().toString()
-                        var Seating_Capacity= i.child("Seating_Capacity").getValue().toString()
-                        var Transmission_Type= i.child("Transmission_Type").getValue().toString()
-                        var Width= i.child("Width").getValue().toString()
-                        var GC = i.child("Ground_Clearance").getValue().toString()
-                        var DriveTrain = i.child("DriveTrain").getValue().toString()
-                        var Bootspace = i.child("Bootspace").getValue().toString()
-                        var Verdict = i.child("Verdict").getValue().toString()
-                        var color1 = i.child("colors").child("c1").getValue().toString()
-                        var color2 = i.child("colors").child("c2").getValue().toString()
-                        var color3 = i.child("colors").child("c3").getValue().toString()
-                        var color4 = i.child("colors").child("c4").getValue().toString()
-                        var color5 = i.child("colors").child("c5").getValue().toString()
+                    if (car_name1.equals(i.child("name").getValue())) {
+
+                        var car_id = i.child("cid").getValue().toString()
+                        var Brand = i.child("brand").getValue().toString()
+                        var Could_Be_Better = i.child("could_Be_Better").getValue().toString()
+                        var Description = i.child("description").getValue().toString()
+                        var Emission_Standard = i.child("emission_Standard").getValue().toString()
+                        var Engine = i.child("engine").getValue().toString()
+                        var Engine_Type = i.child("engine_Type").getValue().toString()
+                        var Fuel_Tank_Capacity = i.child("fuel_Tank_Capacity").getValue().toString()
+                        var Fuel_Type = i.child("fuel_Type").getValue().toString()
+                        var Good_Things = i.child("good_Things").getValue().toString()
+                        var Height = i.child("height").getValue().toString()
+                        var ImageUrl = i.child("imageUrl").getValue().toString()
+                        var Length = i.child("length").getValue().toString()
+                        var Max_Power = i.child("max_Power").getValue().toString()
+                        var Max_Torque = i.child("max_Torque").getValue().toString()
+                        var Mileage = i.child("mileage").getValue().toString()
+                        var Model = i.child("model").getValue().toString()
+                        var Name = i.child("name").getValue().toString()
+                        var Price= i.child("price").getValue().toString()
+                        var Seating_Capacity= i.child("seating_Capacity").getValue().toString()
+                        var Transmission_Type= i.child("transmission_Type").getValue().toString()
+                        var Width= i.child("width").getValue().toString()
+                        var GC = i.child("ground_Clearance").getValue().toString()
+                        var DriveTrain = i.child("driveTrain").getValue().toString()
+                        var Bootspace = i.child("bootspace").getValue().toString()
+                        var Verdict = i.child("verdict").getValue().toString()
+                        var color1 = i.child("color1").getValue().toString()
+                        var color2 = i.child("color2").getValue().toString()
+                        var color3 = i.child("color3").getValue().toString()
+                        var color4 = i.child("color4").getValue().toString()
+                        var color5 = i.child("color5").getValue().toString()
 
 
                         //load car image from the firebase
-                        var imageref = FirebaseStorage.getInstance().reference.child("cars/" + car_id + ".png" )
+                        var imageref = FirebaseStorage.getInstance().reference.child("cars/" + car_id + ".jpg" )
                         imageref.downloadUrl.addOnSuccessListener { Uri ->
 
                             val imageURL = Uri.toString()
@@ -81,7 +83,6 @@ class CarDetails : AppCompatActivity() {
                                 .load(imageURL)
                                 .into(IV)
                         }
-
 
                         //loaddata to load json data into activity
                         car_name.text = Brand +" "+ Name
@@ -165,17 +166,17 @@ class CarDetails : AppCompatActivity() {
             }
         }
 
-        expandBtn3.setOnClickListener {
-            if(expandableLayout3.visibility == View.GONE) {
-                TransitionManager.beginDelayedTransition(cardView, AutoTransition())
-                expandableLayout3.visibility = View.VISIBLE
-                expandBtn3.text = "COLLAPSE"
-            } else {
-                TransitionManager.beginDelayedTransition(cardView, AutoTransition())
-                expandableLayout3.visibility = View.GONE
-                expandBtn3.text = "EXPAND"
-            }
-        }
+//        expandBtn3.setOnClickListener {
+//            if(expandableLayout3.visibility == View.GONE) {
+//                TransitionManager.beginDelayedTransition(cardView, AutoTransition())
+//                expandableLayout3.visibility = View.VISIBLE
+//                expandBtn3.text = "COLLAPSE"
+//            } else {
+//                TransitionManager.beginDelayedTransition(cardView, AutoTransition())
+//                expandableLayout3.visibility = View.GONE
+//                expandBtn3.text = "EXPAND"
+//            }
+//        }
 
         expandBtn4.setOnClickListener {
             if(expandableLayout4.visibility == View.GONE) {
