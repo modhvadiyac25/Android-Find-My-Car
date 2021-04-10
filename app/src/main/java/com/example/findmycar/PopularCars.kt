@@ -14,7 +14,7 @@ class PopularCars : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_popular_cars)
-
+        //recyclerView.setItemViewCacheSize(10)
         layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
 

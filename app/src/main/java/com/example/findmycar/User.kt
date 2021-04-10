@@ -1,3 +1,4 @@
+
 package com.example.findmycar
 
 class User {
@@ -8,7 +9,7 @@ class User {
     var email =""
     var mobile_no :Long = 0
     var imageUrl = ""
-    var password=""
+    var password="" 
 
 
     constructor(uid:String,fname:String ,lname:String,email:String,mobile_no:Long,imageUrl:String,password:String){
