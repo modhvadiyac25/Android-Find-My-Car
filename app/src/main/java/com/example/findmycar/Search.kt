@@ -18,12 +18,8 @@ class Search : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-
-       // val names = arrayOf("Android", "java", "sql", "c", "C++")
-
         var names : ArrayList<String> = ArrayList()
         names.clear()
-
 
         // show profile
       //  val id = intent.getStringExtra("user_id").toString()
@@ -32,20 +28,21 @@ class Search : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
 
             }
-
             override fun onDataChange(snapshot: DataSnapshot) {
                 //var sb = StringBuilder()
                 for (i in snapshot.children) {
-                    names.add(i.child("").child("Brand").getValue().toString())
-
+                    names.add(i.child("").child("name").getValue().toString())
                 }
             }
         }
+
         database.addValueEventListener(getdata)
         database.addListenerForSingleValueEvent(getdata)
 
         val adapter: ArrayAdapter<String> =
             ArrayAdapter(this, android.R.layout.simple_list_item_1, names)
+
+
 
         list_view.adapter = adapter
         search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -54,22 +51,18 @@ class Search : AppCompatActivity() {
                 if (names.contains(query)) {
                     adapter.filter.filter(query)
                     var intent = Intent(this@Search, CarDetails::class.java)
-                    intent.putExtra("Brand", query)
+                    intent.putExtra("Name", query)
                     startActivity(intent)
-                    // Toast.makeText(this@Search," " + query + " <-->" + adapter.filter.filter(query),Toast.LENGTH_LONG).show()
+                   //  Toast.makeText(this@Search," " + query + " <-->" + adapter.filter.filter(query),Toast.LENGTH_LONG).show()
                 } else {
-                    Toast.makeText(this@Search, "Item not Found", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@Search, "Item not Found ", Toast.LENGTH_LONG).show()
                 }
                 return false
             }
-
             override fun onQueryTextChange(query: String?): Boolean {
-
                 adapter.filter.filter(query)
-
                 return false
             }
         })
-
     }
 }

@@ -11,4 +11,5 @@ class SearchList : AppCompatActivity() {
         setContentView(R.layout.activity_search_list)
         startActivity(Intent(this,CarDetails::class.java))
     }
+    
 }

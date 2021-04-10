@@ -40,13 +40,22 @@
         <activity android:name=".test" />
         <activity android:name=".UserProfile" />
         <activity android:name=".UpdateProfile" />
-        <activity android:name=".RegisterActivity" />
+ 
+        <activity android:name=".RegisterActivity">
+
+        </activity>
+        
+ 
         <activity android:name=".LoginActivity">
 
             <!-- if you want to start your app with main activity then cut this <intent-filter> tag and past it in main activity -->
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
