@@ -30,6 +30,8 @@ class UserProfile : AppCompatActivity() {
     private lateinit var imageUri: Uri
     private val REQUEST_IMAGE_CAPTURE = 100
     var database: DatabaseReference = FirebaseDatabase.getInstance().getReference("users")
+    lateinit var oldImage:String
+
     var uid = FirebaseAuth.getInstance().currentUser?.uid
 
 
@@ -38,6 +40,8 @@ class UserProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
+
+
 
         //load profile image from the firebase
         var imageref = FirebaseStorage.getInstance().reference.child("pics/" + uid!!)
@@ -96,6 +100,8 @@ class UserProfile : AppCompatActivity() {
                         findViewById<TextView>(R.id.text_phone).setText(
                             i.child("mobile_no").getValue().toString()
                         )
+                        oldImage = i.child("imageUrl").getValue().toString()
+                        loadInitImage()
                     }
                 }
             }
@@ -103,6 +109,13 @@ class UserProfile : AppCompatActivity() {
         database.addValueEventListener(getdata)
         database.addListenerForSingleValueEvent(getdata)
 
+
+    }
+
+    private fun loadInitImage() {
+        Glide.with(this)
+            .load(oldImage)
+            .into(image_view)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

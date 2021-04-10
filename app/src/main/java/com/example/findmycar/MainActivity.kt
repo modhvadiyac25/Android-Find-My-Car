@@ -3,17 +3,12 @@ package com.example.findmycar
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.TextView
-import android.widget.Toast
-import android.widget.Toolbar
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-import kotlinx.android.synthetic.main.header.*
+
 
 class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,28 +30,9 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
 
-        //Drawer menu
-       // toggle = ActionBarDrawerToggle(this, drawerlayout, R.string.open, R.string.close)
-       // drawerlayout.addDrawerListener(toggle)
-
-        // to connect this toggle with drawer layout
-        //toggle.syncState()
-        //Toast.makeText(this,"email :  ${intent.getStringExtra("email_id").toString()}",Toast.LENGTH_LONG).show()
-//        var tv : TextView  = findViewById(R.id.tv_email)
-//        tv.setText("modhvadiyac25@gmail.com")
-
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navigation_view.setNavigationItemSelectedListener{
             when (it.itemId) {
 
-//                R.id.login -> {
-//                    startActivity(
-//                        Intent(
-//                            this@MainActivity,
-//                            UploadPic::class.java
-//                        )
-//                    )
-//                }
 
                 R.id.profile -> {
                     val intent =
@@ -76,20 +52,20 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
                     )
                     startActivity(intent)
                 }
+                R.id.news-> {
+                    val intent =
+                        Intent(this@MainActivity, NewsFeed::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
 
-//                R.id.nav_car_details -> {
-//                    val intent =
-//                        Intent(this@MainActivity, CarDetails::class.java)
-//                    intent.putExtra(
-//                        "user_id",
-//                        FirebaseAuth.getInstance().currentUser!!.uid
-//                    )
-//                    startActivity(intent)
-//                }
 
                 R.id.EMI -> {
                     val intent =
-                        Intent(this@MainActivity,  CarDetails::class.java)
+                        Intent(this@MainActivity,  EmiCalculator::class.java)
                     intent.putExtra(
                         "user_id",
                         FirebaseAuth.getInstance().currentUser!!.uid
