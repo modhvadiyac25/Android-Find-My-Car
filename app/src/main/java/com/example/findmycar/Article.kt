@@ -1,8 +1,8 @@
 package com.example.findmycar
 
-data class News(
-    val totalResults: String,
-    val articles: List<Article>,
+data class Article(
+    val author: String,
+    val title: String,
     val description: String,
     val url: String,
     val urlToImage: String

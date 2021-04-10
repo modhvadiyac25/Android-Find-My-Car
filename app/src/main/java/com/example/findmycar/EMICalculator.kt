@@ -2,171 +2,76 @@ package com.example.findmycar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.SeekBar
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_emicalculator.*
 
-class EMICalculator : AppCompatActivity() {
-
-//    fun power(base:Double, power: Double) : Double
-//    {
-//        var result: Double = 1.0
-//
-//        var power1 = power.toInt()
-//
-//        for(i in 1..power1)
-//            result *= base
-//        return  result
-//    }
-//
-//    private var principle_amountView: TextView? = null
-//    private var principle_amount_seekbaarView: SeekBar? = null
-//
-//    private var interest_amountView: TextView? = null
-//    private var innterest_amount_seekbarView: SeekBar? = null
-//
-//    private var loan_tenureView: TextView? = null
-//    private var loan_tenure_seekbarrView: SeekBar? = null
-//
-//    private var emiView: TextView? = null;
-//    private var total_interestView: TextView? = null;
-//    private var pyable_amountView: TextView? = null;
-//
-//    var MIN = 10000
-//    var MAX = 2000000
-//    var STEP = 10000
-//
-//    var MIN1 = 500
-//    var MAX1 = 2000
-//    var STEP1 = 25
-//
-//    var MIN2 = 1
-//    var MAX2 = 8
-//    var STEP2 = 1
-//
-//    var progress_custom: Float = 0.0f
-//    var progress_custom1: Float = 0.0f
-//    var progress_custom2: Float = 0.0f
-//
-//    var p: Float = 0.0f
-//    var r: Float= 0.0f
-//    var n: Float= 0.0f
-//    var emi_amount: Float = 0.0f
-
-
+class EmiCalculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_emicalculator)
+        setContentView(R.layout.activity_emi_calculator)
 
-//        principle_amountView = this.principle_amount
-//        principle_amount_seekbaarView = this.principle_amount_seekbaar
-//        principle_amount_seekbaarView!!.max = (MAX - MIN) / STEP
-//        principle_amount_seekbaarView!!.setOnSeekBarChangeListener(this)
-//        principle_amountView!!.text = "10000"
-//
-//        interest_amountView = this.interest_amouunt
-//        innterest_amount_seekbarView = this.innterest_amount_seekbar
-//        innterest_amount_seekbarView!!.max = (MAX1 - MIN1) / STEP1
-//        innterest_amount_seekbarView!!.setOnSeekBarChangeListener(this)
-//        interest_amountView!!.text = "5"
-//
-//        loan_tenureView = this.loan_tenure
-//        loan_tenure_seekbarrView = this.loan_tenure_seekbar
-//        loan_tenure_seekbarrView!!.max = (MAX2 - MIN2) / STEP2
-//        loan_tenure_seekbarrView!!.setOnSeekBarChangeListener(this)
-//        loan_tenureView!!.text = "1"
-//
-//        emiView = this.emi;
-//        total_interestView = this.total_interest;
-//        pyable_amountView = this.pyable_amount;
-//
-//        emiView!!.text = "856"
-//        total_interestView!!.text = "273"
-//        pyable_amountView!!.text = "10273"
+        val loan_amount = findViewById<TextView>(R.id.loan_amount)
+        val interesr_rate = findViewById<TextView>(R.id.interesr_rate)
+        val loan_tenure = findViewById<TextView>(R.id.loan_tenure)
+
+        val btn_count_emi = findViewById<Button>(R.id.btn_count_emi)
+
+        val loan_emi = findViewById<TextView>(R.id.loan_emi)
+        val total_interest = findViewById<TextView>(R.id.total_interest)
+        val total_payment = findViewById<TextView>(R.id.total_payment)
+
+        btn_count_emi.setOnClickListener {
+            val msg: String = loan_amount.text.toString().trim()
+            val msg1: String = interesr_rate.text.toString().trim()
+            val msg2: String = loan_tenure.text.toString().trim()
 
 
-  //  }
-
-//    override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-//
-//        var seekBar1: SeekBar = findViewById(R.id.principle_amount_seekbaar);
-//        var seekBar2: SeekBar = findViewById(R.id.innterest_amount_seekbar);
-//        var seekBar3: SeekBar = findViewById(R.id.loan_tenure_seekbar);
-//
-//        if(seekBar.equals(seekBar1))
-//        {
-//            Toast.makeText(this,principle_amountView!!.text,Toast.LENGTH_LONG).show()
-//            progress_custom = (MIN + ( progress * STEP )).toFloat()
-//            principle_amountView!!.text = (progress_custom.toFloat()).toString()
-//
-//        }
-//
-//        else if(seekBar.equals(seekBar2))
-//        {
-//            progress_custom1 = (MIN1 + (progress * STEP1)).toFloat()
-//            r = (progress_custom1/100.0).toFloat()
-//            interest_amountView!!.text = ((progress_custom1/100.0f).toFloat()).toString()
-//        }
-//
-//        else if(seekBar.equals(seekBar3))
-//        {
-//            progress_custom2 = (MIN2 + ( progress * STEP2 )).toFloat()
-//            n = progress_custom2.toFloat()
-//            loan_tenureView!!.text = progress_custom2.toString()
-//        }
-//
-//        this.r /= (12 * 100)
-//        this.n *= 12
-//
-//
-//        var a:Float = 1 + r
-//        var b:Float = n
-//        var c:Int = b.toInt()
-//        var result:Float = 1.0f
-//
-//        while (c != 0)
-//        {
-//            result *= a
-//            c--
-//        }
-//
-//
-//        var d:Float = 1 + r
-//        var e:Float = n
-//        var f:Int = e.toInt()
-//        var result1:Float = 1.0f
-//
-//        while (f != 0) {
-//            result1 *= d
-//            f--
-//        }
-//
-//
-//        var temp:Float = result / (result1 - 1)
-//
-//        emi_amount = progress_custom.toFloat() * r * temp
-//
-//
-//
-//        emiView!!.text = emi_amount.toString()
-//
+            //check if the EditText have values or not
+            /*if((msg == null || msg == "") || (msg1 == null || msg1 == "") || (msg2 == null || msg2 == "")) {
+                //Toast.makeText(applicationContext, "Missing Information", Toast.LENGTH_SHORT).show()
+                finish();
+                startActivity(getIntent());
+                loan_emi.text = "Shhhhhh"
+            }*/
 
 
-        //var payable_amount = (emi_amount * (12 * n))
-        //var interest = payable_amount - p
+            val principal :Float = msg.toFloat()
+            val rate :Float = msg1.toFloat()
+            val time :Float = msg2.toFloat()
 
-        //total_interestView!!.text =  interest.toString()
-        //pyable_amountView!!.text = payable_amount.toString()
+            if(principal < 10000 || principal > 2500000)
+            {
+                Toast.makeText(applicationContext, "Please enter loan amount between 10000 to 2500000", Toast.LENGTH_LONG).show()
+                finish();
+                startActivity(getIntent());
+            }
+
+            if(rate < 5 || rate > 20)
+            {
+                Toast.makeText(applicationContext, "Please enter interest between 5% to 20%", Toast.LENGTH_LONG).show()
+                finish();
+                startActivity(getIntent());
+            }
+
+            if(time < 1 || time > 7)
+            {
+                Toast.makeText(applicationContext, "Please enter loan tenures between 1 to 7 years", Toast.LENGTH_LONG).show()
+                finish();
+                startActivity(getIntent());
+            }
+
+            val r = rate / (12 * 100)
+            val t = time * 12
+            val emi = (principal * r  * Math.pow(1.toDouble() + r.toDouble(), t.toDouble()).toFloat()) /  ((Math.pow(1.toDouble() + r.toDouble(), t.toDouble()).toFloat()) - 1)
+
+            loan_emi.text = Math.ceil(emi.toDouble()).toString()
+
+            val payable_amount = (emi * (12 * time))
+            total_payment.text = Math.ceil(payable_amount.toDouble()).toString()
+
+            val total_interest_amount = payable_amount - principal
+            total_interest.text = Math.ceil(total_interest_amount.toDouble()).toString()
+        }
     }
-
-//    override fun onStartTrackingTouch(seekBar: SeekBar?) {
-//        var a = ""
-//    }
-//
-//    override fun onStopTrackingTouch(seekBar: SeekBar?) {
-//        var b = ""
-//    }
-
-
 }

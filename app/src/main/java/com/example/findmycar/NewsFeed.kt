@@ -2,62 +2,50 @@ package com.example.findmycar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import kotlinx.android.synthetic.main.activity_news_feed.*
 import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
 
-class NewsFeed : AppCompatActivity(), NewsItemClicked {
+class NewsFeed : AppCompatActivity() {
 
-    private lateinit var  mAdapter: NewsListAdapter
+    lateinit var adapter: NewsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_feed)
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        fetchData()
-        mAdapter = NewsListAdapter(this)
-        recyclerView.adapter = mAdapter
+
+
+        getNews()
     }
 
-    private fun fetchData() {
-        val url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=32928a2683a84591987f113ab04c2faf"
+    private fun getNews() {
+        val news: Call<News> = NewsService.newsInstance.getHeadlines("carandbike.com",1)
 
-        val jsonObjectRequest = JsonObjectRequest(
-            Request.Method.POST,
-            url,
-            null,
-            Response.Listener {
-                val newsJsonArray = it.getJSONArray("articles")
-                val newsArray = ArrayList<News>()
-
-                for(i in 0 until newsJsonArray.length()) {
-                    val newsJsonObject = newsJsonArray.getJSONObject(i)
-
-                    val news = News(
-                        newsJsonObject.getString("title"),
-                        newsJsonObject.getString("author"),
-                        newsJsonObject.getString("url"),
-                        newsJsonObject.getString("urlToImage")
-                    )
-                    newsArray.add(news)
-                }
-
-                mAdapter.updateNews(newsArray)
-
-            },
-            Response.ErrorListener {
-
+        news.enqueue(object:Callback<News>{
+            override fun onFailure(call: Call<News>, t: Throwable) {
+                Log.d("NewsTag","Error in fetching news",t)
             }
-        )
-        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
-    }
 
-    override fun onItemClicked(item: News) {
+            override fun onResponse(call: Call<News>, response: retrofit2.Response<News>) {
+                val news = response.body()
 
+                if(news != null) {
+                    Log.d("NewsTag",news.toString())
+
+                    adapter = NewsAdapter(this@NewsFeed,news.articles)
+                    newsList.adapter = adapter
+                    newsList.layoutManager = LinearLayoutManager(this@NewsFeed)
+                }
+            }
+        })
     }
 }
