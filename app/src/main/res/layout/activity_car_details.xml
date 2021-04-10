@@ -538,33 +538,33 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="15dp">-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:textSize="24dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/displayblack"
-                        android:text="Other Versions"
-                        android:layout_marginTop="15dp"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:textSize="24dp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:fontFamily="@font/displayblack"-->
+<!--                        android:text="Other Versions"-->
+<!--                        android:layout_marginTop="15dp"/>-->
 
-                    <Button
-                        android:id="@+id/expandBtn3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="EXPAND"
-                        android:textSize="12dp"
-                        android:textColor="#6200EA"
-                        android:layout_marginLeft="90dp"
-                        android:backgroundTint="@color/white"
-                        android:layout_marginTop="10dp"/>
+<!--                    <Button-->
+<!--                        android:id="@+id/expandBtn3"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:text="EXPAND"-->
+<!--                        android:textSize="12dp"-->
+<!--                        android:textColor="#6200EA"-->
+<!--                        android:layout_marginLeft="90dp"-->
+<!--                        android:backgroundTint="@color/white"-->
+<!--                        android:layout_marginTop="10dp"/>-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:id="@+id/expandableLayout3"
