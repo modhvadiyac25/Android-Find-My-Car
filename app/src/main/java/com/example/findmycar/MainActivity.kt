@@ -3,6 +3,7 @@ package com.example.findmycar
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
@@ -41,7 +42,8 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
         // to connect this toggle with drawer layout
         //toggle.syncState()
         //Toast.makeText(this,"email :  ${intent.getStringExtra("email_id").toString()}",Toast.LENGTH_LONG).show()
-        tv_email.text = "modhvadiyac25@gmail.com"
+//        var tv : TextView  = findViewById(R.id.tv_email)
+//        tv.setText("modhvadiyac25@gmail.com")
 
 //        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navigation_view.setNavigationItemSelectedListener{
@@ -102,30 +104,9 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
         context_search.setOnClickListener {
             startActivity(Intent(this,Search::class.java))
         }
-
-        //login logo
-//        profile_icon.setOnClickListener {
-//            val intent =
-//                Intent(this@MainActivity, UserProfile::class.java)
-//            intent.putExtra(
-//                "user_id",
-//                FirebaseAuth.getInstance().currentUser!!.uid
-//            )
-//            startActivity(intent)
-//        }
-
-        //onclick of drawer menu icon
-//        drawermenu_icon.setOnClickListener() {
-//
-//            //calling drawer menu
-//
-//        }
     }
 
-    //UDF function for drawerlayout
-//    fun navMenu() {
-//
-//    }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (toggle.onOptionsItemSelected(item)) {
