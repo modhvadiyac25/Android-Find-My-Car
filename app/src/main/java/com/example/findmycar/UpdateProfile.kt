@@ -21,7 +21,7 @@ class UpdateProfile : AppCompatActivity() {
     private var mFirebaseInstance: FirebaseDatabase? = null
     var uid = FirebaseAuth.getInstance().currentUser?.uid
 
-
+    lateinit var oldImage:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,6 +109,8 @@ class UpdateProfile : AppCompatActivity() {
                         findViewById<EditText>(R.id.mobile_no).setText(
                             i.child("mobile_no").getValue().toString()
                         )
+                       oldImage = i.child("imageUrl").getValue().toString()
+                        loadInitImage()
                     }
                 }
             }
@@ -125,6 +127,12 @@ class UpdateProfile : AppCompatActivity() {
 //            finish()
 //        }
 
+    }
+
+    private fun loadInitImage() {
+        Glide.with(this)
+            .load(oldImage)
+            .into(image_view)
     }
 }
 

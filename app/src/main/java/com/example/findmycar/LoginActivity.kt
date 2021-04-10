@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
             //startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
             // try this after everything ok !!
             onBackPressed()
-        }
+    }
 
 //        var btn = findViewById<Button>(R.id.btn_forgot_pass)
 //        btn.setOnClickListener {
