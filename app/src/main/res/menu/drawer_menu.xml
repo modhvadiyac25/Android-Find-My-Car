@@ -18,18 +18,25 @@
         <item
             android:id="@+id/nav_top10_cars"
             android:title="Top 10 Cars"/>
+        <item
+            android:id="@+id/nav_upcomming_cars"
+            android:title="Upcomming Cars"/>
+
+        <item
+            android:id="@+id/JustLaunchedCars"
+
+            android:title="Just Launched Cars" />
 
         <item
             android:id="@+id/EMI"
 
             android:title="EMI Calculater" />
         <item
-            android:id="@+id/JustLaunchedCars"
-
-            android:title="Just Launched Cars" />
-        <item
             android:id="@+id/news"
             android:title="Automobile News" />
+        <item
+            android:id="@+id/logout"
+            android:title="Logout" />
 <!--        <item-->
 <!--            android:id="@+id/nav_find_new_cars"-->
 

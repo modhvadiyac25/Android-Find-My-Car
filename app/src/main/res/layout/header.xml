@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:text="modhvadiyac25.gmail.com"
+        android:text="Hello ! There"
         android:layout_marginBottom="20dp"
         android:textStyle="bold"
          />
