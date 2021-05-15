@@ -52,6 +52,34 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
                     )
                     startActivity(intent)
                 }
+                R.id.nav_top10_cars -> {
+                    val intent =
+                        Intent(this@MainActivity, PopularCars::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
+                R.id.JustLaunchedCars -> {
+                    val intent =
+                        Intent(this@MainActivity, PopularCars::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
+
+                R.id.nav_upcomming_cars -> {
+                    val intent =
+                        Intent(this@MainActivity, PopularCars::class.java)
+                    intent.putExtra(
+                        "user_id",
+                        FirebaseAuth.getInstance().currentUser!!.uid
+                    )
+                    startActivity(intent)
+                }
                 R.id.news-> {
                     val intent =
                         Intent(this@MainActivity, NewsFeed::class.java)
@@ -71,6 +99,11 @@ class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelecte
                         FirebaseAuth.getInstance().currentUser!!.uid
                     )
                     startActivity(intent)
+                }
+                R.id.logout -> {
+                    FirebaseAuth.getInstance().signOut()
+                    startActivity(Intent(this, LoginActivity::class.java))
+                    finish()
                 }
             }
             true

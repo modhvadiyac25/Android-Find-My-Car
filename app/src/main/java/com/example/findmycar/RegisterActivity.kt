@@ -77,7 +77,7 @@ class RegisterActivity : AppCompatActivity() {
                     val password: String = password.text.toString().trim() { it <= ' ' }
                     val cpassword: String = cpassword.text.toString().trim() { it <= ' ' }
                     //this image url feild will be updated later on profile avtivity
-                    val imageUrl = ""
+                    val imageUrl = "https://firebasestorage.googleapis.com/v0/b/findmycar-6b24a.appspot.com/o/pics%2Ftestprofile.jpg?alt=media&token=b344e31f-b11d-44b5-90ed-327d0c41c7e1"
 
                     var database = FirebaseDatabase.getInstance().getReference().child("users")
                     lateinit var firebaseuser: FirebaseUser

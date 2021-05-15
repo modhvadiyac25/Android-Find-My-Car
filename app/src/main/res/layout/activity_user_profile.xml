@@ -84,9 +84,9 @@
                 android:layout_gravity="top"
                 android:drawableLeft="@drawable/ic_profile_name"
                 android:drawablePadding="16dp"
-                android:text="chetan modhvadiya"
+                android:text="Chetan Modhvadiya"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                tools:text="chetan modhvadiya" />
+                tools:text="Chetan Modhvadiya" />
 
             <TextView
                 android:id="@+id/text_not_verified"
@@ -107,7 +107,7 @@
                 android:drawableLeft="@drawable/ic_email"
                 android:textSize="15dp"
                 android:drawablePadding="16dp"
-                android:text="modhvadiyac25@gmail.com"
+                android:text="maherchetan02@gmail.com"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 tools:text="modhvadiyac25@gmail.com" />
 
@@ -142,7 +142,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
                 android:background="?colorPrimary"
-                android:text="Edite Profile"
+                android:text="Edit Profile"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white" />
             <ProgressBar
